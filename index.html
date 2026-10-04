@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HireWise - AI Recruitment Platform</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     SPLASH SCREEN
+===================================================== -->
+
+<section id="splashScreen" class="screen splash-screen">
+
+    <div class="splash-content">
+
+        <div class="brand-logo large-logo">
+            <div class="logo-icon">
+                <i class="bi bi-stars"></i>
+            </div>
+
+            <span>Hire<span>Wise</span></span>
+        </div>
+
+        <p class="splash-tagline">
+            AI-Powered Recruitment &amp; Talent Intelligence
+        </p>
+
+        <div class="splash-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AUTH SCREEN
+===================================================== -->
+
+<section id="authScreen" class="screen hidden">
+
+    <div class="auth-wrapper">
+
+        <div class="auth-brand">
+
+            <div class="brand-logo">
+                <div class="logo-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+                <span>Hire<span>Wise</span></span>
+            </div>
+
+            <h1>
+                Smarter hiring.
+                <br>
+                Better talent.
+            </h1>
+
+            <p>
+                AI-powered candidate matching, explainable rankings
+                and intelligent document verification.
+            </p>
+
+        </div>
+
+
+        <div class="auth-card">
+
+            <!-- LOGIN -->
+
+            <div id="loginPanel">
+
+                <div class="auth-header">
+                    <span class="auth-label">WELCOME BACK</span>
+
+                    <h2>Sign in to HireWise</h2>
+
+                    <p>
+                        Access your recruitment workspace.
+                    </p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="you@example.com"
+                                required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+                            <i class="bi bi-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required>
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="primary-btn full-btn">
+
+                        Sign In
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <p class="auth-switch">
+
+                    Don't have an account?
+
+                    <button type="button"
+                            onclick="showSignup()">
+
+                        Create one
+
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- SIGNUP -->
+
+            <div id="signupPanel" class="hidden">
+
+                <div class="auth-header">
+
+                    <span class="auth-label">
+                        GET STARTED
+                    </span>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Start building your smarter hiring workspace.
+                    </p>
+
+                </div>
+
+
+                <form id="signupForm">
+
+                    <div class="form-group">
+
+                        <label for="signupName">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-person"></i>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Your name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="you@example.com"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-lock"></i>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="primary-btn full-btn">
+
+                        Create Account
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <button type="button"
+                            onclick="showLogin()">
+
+                        Sign in
+
+                    </button>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     USER TYPE SCREEN
+===================================================== -->
+
+<section id="roleScreen"
+         class="screen hidden">
+
+    <div class="center-container">
+
+        <div class="simple-brand">
+            <div class="logo-icon">
+                <i class="bi bi-stars"></i>
+            </div>
+
+            <span>Hire<span>Wise</span></span>
+        </div>
+
+
+        <div class="role-header">
+
+            <span class="auth-label">
+                GET STARTED
+            </span>
+
+            <h1>
+                How will you use HireWise?
+            </h1>
+
+            <p>
+                Choose the workspace that matches your role.
+            </p>
+
+        </div>
+
+
+        <div class="role-grid">
+
+            <button class="role-card"
+                    onclick="selectRole('owner')">
+
+                <div class="role-icon owner-icon">
+                    <i class="bi bi-building"></i>
+                </div>
+
+                <h2>
+                    Owner / Recruiter
+                </h2>
+
+                <p>
+                    Create jobs, analyze candidates,
+                    compare talent and manage verification.
+                </p>
+
+                <span class="role-action">
+                    Enter Recruiter Workspace
+                    <i class="bi bi-arrow-right"></i>
+                </span>
+
+            </button>
+
+
+            <button class="role-card"
+                    onclick="selectRole('employee')">
+
+                <div class="role-icon employee-icon">
+                    <i class="bi bi-person-badge"></i>
+                </div>
+
+                <h2>
+                    Employee / Job Seeker
+                </h2>
+
+                <p>
+                    Build your profile, upload your resume
+                    and discover relevant opportunities.
+                </p>
+
+                <span class="role-action">
+                    Enter Employee Workspace
+                    <i class="bi bi-arrow-right"></i>
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OWNER SECURITY
+===================================================== -->
+
+<section id="ownerSecurityScreen"
+         class="screen hidden">
+
+    <div class="security-container">
+
+        <div class="security-card">
+
+            <div class="security-icon">
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
+
+            <span class="auth-label">
+                RESTRICTED AREA
+            </span>
+
+            <h1>
+                Owner Access
+            </h1>
+
+            <p>
+                Enter the owner access password to continue
+                to the HireWise recruitment workspace.
+            </p>
+
+
+            <form id="ownerSecurityForm">
+
+                <div class="form-group">
+
+                    <label for="ownerSecurityPassword">
+                        Owner Access Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-key"></i>
+
+                        <input
+                            type="password"
+                            id="ownerSecurityPassword"
+                            placeholder="Enter access password"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div id="securityError"
+                     class="form-error hidden">
+                </div>
+
+
+                <button type="submit"
+                        class="primary-btn full-btn">
+
+                    Verify Access
+
+                    <i class="bi bi-shield-check"></i>
+
+                </button>
+
+            </form>
+
+
+            <button class="back-btn"
+                    onclick="showRoleScreen()">
+
+                <i class="bi bi-arrow-left"></i>
+
+                Back to role selection
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OWNER DASHBOARD
+===================================================== -->
+
+<section id="ownerDashboard"
+         class="dashboard-screen hidden">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="dashboard-sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="logo-icon">
+                <i class="bi bi-stars"></i>
+            </div>
+
+            <span>
+                Hire<span>Wise</span>
+            </span>
+
+        </div>
+
+
+        <div class="sidebar-section-label">
+            RECRUITER WORKSPACE
+        </div>
+
+
+        <nav class="dashboard-nav">
+
+            <button
+                class="dashboard-nav-item active"
+                onclick="showOwnerPage('dashboard', this)">
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>Dashboard</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-nav-item"
+                onclick="showOwnerPage('jobs', this)">
+
+                <i class="bi bi-briefcase-fill"></i>
+
+                <span>Jobs</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-nav-item"
+                onclick="showOwnerPage('candidates', this)">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>Candidates</span>
+
+            </button>
+
+
+            <button
+                class="dashboard-nav-item"
+                onclick="showOwnerPage('verification', this)">
+
+                <i class="bi bi-shield-check"></i>
+
+                <span>Document Verification</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                class="dashboard-nav-item"
+                onclick="showOwnerPage('settings', this)">
+
+                <i class="bi bi-gear-fill"></i>
+
+                <span>Settings</span>
+
+            </button>
+
+
+            <button
+                class="logout-btn"
+                onclick="logout()">
+
+                <i class="bi bi-box-arrow-left"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="dashboard-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="dashboard-topbar">
+
+            <div>
+
+                <span class="topbar-label">
+                    OWNER WORKSPACE
+                </span>
+
+                <h2 id="dashboardPageTitle">
+                    Dashboard
+                </h2>
+
+            </div>
+
+
+            <div class="topbar-user">
+
+                <div class="topbar-user-info">
+
+                    <strong id="ownerDisplayName">
+                        Owner
+                    </strong>
+
+                    <span>
+                        Recruiter
+                    </span>
+
+                </div>
+
+                <div class="avatar">
+                    O
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div id="dashboardContent"
+             class="dashboard-content">
+
+
+            <!-- DASHBOARD HOME -->
+
+            <div id="dashboardPage"
+                 class="dashboard-page">
+
+
+                <div class="welcome-banner">
+
+                    <div>
+
+                        <span class="dashboard-eyebrow">
+                            RECRUITER OVERVIEW
+                        </span>
+
+                        <h1>
+                            Welcome back,
+                            <span id="welcomeName">
+                                Owner
+                            </span>!
+                        </h1>
+
+                        <p>
+                            Manage your hiring pipeline,
+                            discover top candidates and make
+                            smarter recruitment decisions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="welcome-icon">
+
+                        <i class="bi bi-stars"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STAT CARDS -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="bi bi-briefcase-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Active Jobs
+                            </span>
+
+                            <strong id="activeJobsCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Candidates
+                            </span>
+
+                            <strong>
+                                24
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AI Matches
+                            </span>
+
+                            <strong>
+                                18
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Verified Docs
+                            </span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="dashboard-eyebrow">
+                            QUICK ACTIONS
+                        </span>
+
+                        <h2>
+                            Start hiring
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions-grid">
+
+                    <button
+                        class="action-card"
+                        onclick="showOwnerPage('createJob')">
+
+                        <div class="action-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Create New Job
+                            </h3>
+
+                            <p>
+                                Add a new job opening
+                                and define requirements.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </button>
+
+
+                    <button
+                        class="action-card"
+                        onclick="showOwnerPage('candidates')">
+
+                        <div class="action-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Analyze Candidates
+                            </h3>
+
+                            <p>
+                                Find and compare the best
+                                candidates for your jobs.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </button>
+
+
+                    <button
+                        class="action-card"
+                        onclick="showOwnerPage('verification')">
+
+                        <div class="action-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Verify Documents
+                            </h3>
+
+                            <p>
+                                Review candidate documents
+                                and verification status.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-up-right action-arrow"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- RECENT ACTIVITY -->
+
+                <div class="section-heading recent-heading">
+
+                    <div>
+
+                        <span class="dashboard-eyebrow">
+                            HIRING ACTIVITY
+                        </span>
+
+                        <h2>
+                            Recent activity
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-card">
+
+                    <div class="activity-item">
+
+                        <div class="activity-item-icon">
+                            <i class="bi bi-person-check-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                New candidate profiles available
+                            </strong>
+
+                            <p>
+                                AI matching is ready to analyze
+                                candidates for your jobs.
+                            </p>
+
+                        </div>
+
+                        <span class="activity-time">
+                            Today
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-item-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Document verification available
+                            </strong>
+
+                            <p>
+                                Review submitted academic
+                                and professional documents.
+                            </p>
+
+                        </div>
+
+                        <span class="activity-time">
+                            Today
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- OTHER PAGES WILL BE GENERATED BY JAVASCRIPT -->
+
+        </div>
+
+    </main>
+
+</section>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+<!-- =====================================================
+     EMPLOYEE DASHBOARD
+===================================================== -->
+
+<div id="employeeDashboard" class="employee-dashboard hidden">
+
+    <!-- SIDEBAR -->
+    <aside class="employee-sidebar">
+
+        <div class="employee-brand">
+            <div class="brand-logo">H</div>
+
+            <div>
+                <h2>HireWise</h2>
+                <span>Job Seeker</span>
+            </div>
+        </div>
+
+        <nav class="employee-nav">
+
+            <button class="employee-nav-item active">
+                <span>Dashboard</span>
+            </button>
+
+            <button class="employee-nav-item">
+                <span>My Profile</span>
+            </button>
+
+            <button class="employee-nav-item">
+                <span>My Resume</span>
+            </button>
+
+            <button class="employee-nav-item">
+                <span>Documents</span>
+            </button>
+
+            <button class="employee-nav-item">
+                <span>Job Opportunities</span>
+            </button>
+
+            <button class="employee-nav-item">
+                <span>My Applications</span>
+            </button>
+
+            <button class="employee-nav-item">
+                <span>AI Resume Assistant</span>
+            </button>
+
+        </nav>
+
+        <div class="employee-sidebar-bottom">
+
+            <button
+                class="employee-logout"
+                onclick="showScreen('authScreen')">
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN AREA -->
+    <main class="employee-main">
+
+        <!-- TOPBAR -->
+        <header class="employee-topbar">
+
+            <div>
+                <p class="employee-eyebrow">
+                    EMPLOYEE WORKSPACE
+                </p>
+
+                <h1>Welcome back 👋</h1>
+            </div>
+
+            <div class="employee-user">
+
+                <div class="employee-avatar">
+                    JS
+                </div>
+
+                <div>
+                    <strong>Job Seeker</strong>
+                    <span>Candidate</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD CONTENT -->
+        <section class="employee-content">
+
+            <div class="employee-hero">
+
+                <div>
+
+                    <p class="employee-eyebrow">
+                        YOUR CAREER DASHBOARD
+                    </p>
+
+                    <h2>
+                        Build your profile.
+                        Find your next opportunity.
+                    </h2>
+
+                    <p>
+                        Manage your resume, verify your documents,
+                        discover matching jobs and improve your
+                        chances with AI-powered career tools.
+                    </p>
+
+                </div>
+
+                <div class="employee-hero-badge">
+                    <strong>72%</strong>
+                    <span>Profile Complete</span>
+                </div>
+
+            </div>
+
+
+            <!-- QUICK STATS -->
+
+            <div class="employee-stats">
+
+                <div class="employee-stat-card">
+                    <span>Profile</span>
+                    <strong>72%</strong>
+                    <small>Completion</small>
+                </div>
+
+                <div class="employee-stat-card">
+                    <span>Jobs</span>
+                    <strong>12</strong>
+                    <small>Matching opportunities</small>
+                </div>
+
+                <div class="employee-stat-card">
+                    <span>Applications</span>
+                    <strong>4</strong>
+                    <small>Active applications</small>
+                </div>
+
+                <div class="employee-stat-card">
+                    <span>Documents</span>
+                    <strong>3</strong>
+                    <small>Verified documents</small>
+                </div>
+
+            </div>
+
+
+            <!-- MAIN CARDS -->
+
+            <div class="employee-section-grid">
+
+                <div class="employee-feature-card">
+
+                    <div class="feature-icon">
+                        ✦
+                    </div>
+
+                    <h3>AI Resume Assistant</h3>
+
+                    <p>
+                        Improve your resume, identify your strengths
+                        and understand why you stand out for a role.
+                    </p>
+
+                    <button
+                        onclick="alert('AI Resume Assistant coming next')">
+                        Explore AI Tools →
+                    </button>
+
+                </div>
+
+
+                <div class="employee-feature-card">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>Document Verification</h3>
+
+                    <p>
+                        Upload certificates and documents for
+                        AI-powered verification and authenticity checks.
+                    </p>
+
+                    <button
+                        onclick="alert('Documents section coming next')">
+                        Manage Documents →
+                    </button>
+
+                </div>
+
+
+                <div class="employee-feature-card">
+
+                    <div class="feature-icon">
+                        ◎
+                    </div>
+
+                    <h3>Recommended Jobs</h3>
+
+                    <p>
+                        Discover jobs that match your skills,
+                        experience and career profile.
+                    </p>
+
+                    <button
+                        onclick="alert('Job Opportunities coming next')">
+                        View Jobs →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
